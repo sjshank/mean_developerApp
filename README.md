@@ -1,2 +1,11 @@
 # mean_developerApp
-It contains an working example of CRUD functionality using Mongodb, Expressjs, Angularjs and Nodejs. A small project to learn scalable app construction 
+A simple and small working example of CRUD functionality using Mongodb, Expressjs, Angularjs and Nodejs for beginners to learn MEAN Stack development.
+It doesn't conatin any authentication.
+
+Steps need to be follow to make app in running mode.
+  1. Install Nodejs and make node env up. This will automatically install NPM package in your system
+  2. Install mongodb and make it up. No need to create new db for this sample. It will create by own.
+  3. Install Python 2.7+ version
+  4. Run 'npm install' on 'package.json'. This will create new folder 'node_modules' inside same directory where you can see all      the mentioned dependencies inside 'package.json' will gets installed.
+  5. Run either 'grunt' over root directory. This will execute all the task mentioned inside 'gruntfile.js'.
+  6. Hit "localhost:3000" to see running application
