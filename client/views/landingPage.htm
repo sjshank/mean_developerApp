@@ -1,0 +1,29 @@
+<html ng-cloak ng-app="meanAppDemo">
+	<head>
+		<title>{{title}}</title>
+	</head>
+<body>
+
+	<div ng-controller="landingPageCtrl">
+		<h1>There are {{developers.length}} MEAN Stack Developers</h1>
+		<ul>
+			<li ng-repeat="developer in developers | orderBy:'name'" style="margin-top: 10px;" id="">
+				<div style="float: left; width: 400px;"><div style="float: left; width: 170px;">{{developer.name}} - {{developer.city}}  </div><label>Created on : <span>{{developer.created_at}}</span></label>&nbsp;&nbsp;
+				</div>
+				<input type="button" id="{{developer._id}}" value="Delete" ng-click="deleteDeveloper(this)" />
+			</li>
+		</ul>
+		<form ng-submit="add()" style="margin-left: 40px;">
+			<div style="float: left; width: 170px;"><input type="text" placeholder="Enter your name" ng-model="dName" ></div>
+			<input type="text" placeholder="Enter your city" ng-model="dCity">&nbsp;&nbsp;&nbsp;
+			<input type="submit" value="Add"  style="margin-left: 65px; width: 61px;" />
+		</form>
+	</div>
+	
+		<script type="text/javascript" src="/angular/angular.js"></script>
+		<script type="text/javascript" src="https://code.angularjs.org/1.2.16/angular-resource.js"></script>
+		<script type="text/javascript" src="/js/meanApp.js"></script>
+		<script type="text/javascript" src="/js/controllers/landingPageController.js"></script>
+</body>
+
+</html>
