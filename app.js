@@ -12,7 +12,7 @@ var express = require('express'),
 var server = require('./server')(app);
 
 /*
-*	Built-in middleware express.static to server static files such as images/css/js etc
+*	Built-in middleware express.static for making files such as images/css/js accessable
 */
 	app.use('/js', express.static('client/js/'));
 	app.use(express.static('node_modules'));
