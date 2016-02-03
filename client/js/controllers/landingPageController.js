@@ -1,10 +1,11 @@
 
 // Angular based controller
-meanApp.controller('landingPageCtrl', ['$scope', '$resource', '$http', '$location', function($scope, $resource, $http, $location){
+meanApp.controller('landingPageCtrl', ['$scope', '$resource', '$http', function($scope, $resource, $http){
 	
 	//REST call urls
 	var Developers = $resource('/api/developers');
-	var DeleteDevelopers = $resource('/api/delete/:_id', {_id:'@id'})
+	var DeleteDevelopers = $resource('/api/delete/:_id', {_id:'@id'});
+
 	
 	//Retrieve all developers on page load
 	Developers.query(function(result){
@@ -38,4 +39,5 @@ meanApp.controller('landingPageCtrl', ['$scope', '$resource', '$http', '$locatio
                 console.log('Error: ' + data);
             });
     };
+
 }]);
