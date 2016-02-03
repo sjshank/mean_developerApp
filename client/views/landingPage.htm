@@ -1,23 +1,37 @@
 <html ng-cloak ng-app="meanAppDemo">
 	<head>
 		<title>{{title}}</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/stylesheets/style.css" />
 	</head>
 <body>
-
-	<div ng-controller="landingPageCtrl">
-		<h1>There are {{developers.length}} MEAN Stack Developers</h1>
-		<ul>
-			<li ng-repeat="developer in developers | orderBy:'name'" style="margin-top: 10px;" id="">
-				<div style="float: left; width: 400px;"><div style="float: left; width: 170px;">{{developer.name}} - {{developer.city}}  </div><label>Created on : <span>{{developer.created_at}}</span></label>&nbsp;&nbsp;
-				</div>
-				<input type="button" id="{{developer._id}}" value="Delete" ng-click="deleteDeveloper(this)" />
-			</li>
-		</ul>
-		<form ng-submit="add()" style="margin-left: 40px;">
-			<div style="float: left; width: 170px;"><input type="text" placeholder="Enter your name" ng-model="dName" ></div>
-			<input type="text" placeholder="Enter your city" ng-model="dCity">&nbsp;&nbsp;&nbsp;
-			<input type="submit" value="Add"  style="margin-left: 65px; width: 61px;" />
-		</form>
+	<div ng-controller="landingPageCtrl" class="container">
+		<div class="row" style="text-align:center;">
+			<h2><strong>MEAN Sample Application</strong></h2>
+		</div>
+		<div class="subContainerDiv" >
+			<hgroup>
+			<h3>There is/are {{developers.length}} MEAN Stack Developer/s</h3>
+		</hgroup>
+		<div class="row">
+			<ul>
+				<li ng-repeat="developer in developers | orderBy:'name'" style="margin-top: 10px;" id="">
+					<div style="float: left; width: 400px;"><div style="float: left; width: 170px;">{{developer.name}} - {{developer.city}}  </div><label>Created on : <span>{{developer.created_at}}</span></label>&nbsp;&nbsp;
+					</div>
+					<input type="button" id="{{developer._id}}" value="Delete" ng-click="deleteDeveloper(this)" />
+				</li>
+			</ul>
+		</div>
+			<div class="row">
+				<form ng-submit="add()" style="margin-left: 40px;">
+					<div class="nameDiv">
+						<input type="text" placeholder="Enter your name" ng-model="dName" required maxLength = 10>
+					</div>
+						<input type="text" placeholder="Enter your city" ng-model="dCity" required maxLength = 8>&nbsp;&nbsp;&nbsp;
+						<input type="submit" value="Add" class="addBtn" />
+				</form>
+			</div>
+		</div>
 	</div>
 	
 		<script type="text/javascript" src="/angular/angular.js"></script>
