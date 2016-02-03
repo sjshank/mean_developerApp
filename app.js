@@ -37,11 +37,11 @@ var server = require('./server')(app);
 
 	
 /*
-*	Establish mongodb connection
+*	Establish mongodb connection. This will mean-sample schema in mongo database.
 */
 	mongoose.connect('mongodb://127.0.0.1:27017/mean-sample');
 
-//Show landing page
+//Render landing page
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/client/views/landingPage.htm');
 })
