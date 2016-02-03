@@ -1,0 +1,18 @@
+.subContainerDiv {
+	width: 50%;
+	margin-left: 26%;
+	border: 1px solid;
+    border-radius: 4px;
+    margin-top: 15px !important;
+    padding-bottom: 15px;
+    padding-left: 35px;
+}
+.nameDiv {
+	float: left;
+	width: 170px;
+	margin-left: -12px;
+}
+.addBtn {
+	margin-left: 67px;
+	width: 61px;
+}
